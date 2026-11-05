@@ -1,100 +1,185 @@
-# Project-1-
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 完整 SEO Meta 標籤 -->
-    <title>國家漫畫博物館：演武場裡的台漫新風華 | 走讀導覽</title>
-    <meta name="description" content="國家漫畫博物館（臺中刑務所官舍群）官方走讀導覽網頁。結合百年日式木造官舍與當代台漫主題展演，提供交通指南、展區介紹與完整參觀攻略。">
-    <meta name="keywords" content="國家漫畫博物館, 臺中刑務所官舍群, 台灣漫畫, 走讀, 展覽導覽, 臺中景點">
-    <meta name="author" content="謝曼娸 (D1485037)">
-    
-    <!-- Open Graph 社交分享優化 -->
-    <meta property="og:title" content="國家漫畫博物館：演武場裡的台漫新風華">
-    <meta property="og:description" content="走進百年刑務所官舍，探索台灣原創漫畫的跨時代宇宙。">
-    <meta property="og:type" content="website">
-    
-    <!-- 引入模組化外部 CSS 檔案 -->
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <!-- 頂部導覽列 -->
-    <header class="navbar">
-        <div class="nav-container">
-            <h1 class="logo">🎨 國漫館走讀導覽</h1>
-            <nav class="nav-links">
-                <a href="#sec1">簡介</a>
-                <a href="#sec2">特色</a>
-                <a href="#sec3">展館</a>
-                <a href="#sec6">地圖</a>
-            </nav>
-        </div>
-    </header>
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background-color: #f7f5f0;
+    color: #333;
+}
 
-    <!-- 主體格線系統容器 (Grid System Layout) -->
-    <div class="main-grid-container">
-        
-        <!-- 左側邊欄 (Sidebar) -->
-        <aside class="sidebar">
-            <h3>導覽選單</h3>
-            <ul>
-                <li><a href="#sec1">一、國漫館簡介</a></li>
-                <li><a href="#sec2">二、園區特色與散步順序</a></li>
-                <li><a href="#sec3">三、展館比較表</a></li>
-                <li><a href="#sec4">四、園區寫真照片</a></li>
-                <li><a href="#sec5">五、影音報導</a></li>
-                <li><a href="#sec6">六、位置地圖</a></li>
-                <li><a href="#sec7">七、走讀小提醒</a></li>
-            </ul>
-        </aside>
+/* 頂部導覽列 */
+.navbar {
+    background-color: #5c4033;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        <!-- 主要內容區 (Content Area) -->
-        <main class="content-area">
-            
-            <section id="sec1" class="card">
-                <h2>一、國漫館簡介</h2>
-                <p>國家漫畫博物館位於台中市西區林森路 33 號，基地落腳於具有百年歷史的「台中刑務所官舍群」。園區打破傳統博物館框架，以「在園區裡遇見漫畫」為核心理念，讓遊客穿梭於百年榕樹、榻榻米展間與日式庭園之間。</p>
-            </section>
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-            <section id="sec2" class="card">
-                <h2>二、園區特色與散步順序</h2>
-                <ul>
-                    <li><strong>官舍建築群：</strong>完整保留日式木造宿舍與演武場。</li>
-                    <li><strong>沉浸式展演：</strong>於榻榻米空間體驗台漫魅力。</li>
-                </ul>
-            </section>
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
 
-            <section id="sec3" class="card">
-                <h2>三、展館比較表</h2>
-                <table>
-                    <thead>
-                        <tr><th>展區名稱</th><th>空間特色</th><th>參觀重點</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>演武場</td><td>挑高木構道場</td><td>日式傳統工藝</td></tr>
-                        <tr><td>東側官舍</td><td>木造榻榻米</td><td>沉浸式漫畫閱讀</td></tr>
-                    </tbody>
-                </table>
-            </section>
+/* 主體 Grid 雙欄排版 (側邊欄 + 內容區) */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    min-height: 70vh;
+}
 
-            <section id="sec6" class="card">
-                <h2>六、位置地圖：找到國漫館</h2>
-                <div class="media-aspect-ratio">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.941652158942!2d120.67285187597142!3d24.136318073741165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693cf836fb05bd%3A0x6739023ebc4ef674!2zIOWLp-mAn-iLseWciA!5e0!3m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </section>
+/* 側邊欄樣式 */
+.sidebar {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    height: fit-content;
+}
 
-        </main>
-    </div>
+/* 主內容區 */
+.content-area {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
 
-    <!-- 頁尾 -->
-    <footer class="footer">
-        <p>© 2026 國家漫畫博物館走讀專題 | 製作：D1485037 謝曼娸</p>
-    </footer>
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* RWD 響應式斷點：手機版自動改為單欄 */
+@media (max-width: 768px) {
+    .layout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* 色彩、字型與元件裝飾 */
+h1, h2, h3 {
+    color: #5c4033;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.tab-menu {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.tab-menu li {
+    margin-bottom: 0.8rem;
+}
+
+.tab-btn {
+    display: block;
+    padding: 10px 15px;
+    color: #5c4033;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: #5c4033;
+    color: #fff;
+}
+
+.card {
+    background: #f2ebe1;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2ebe1;
+    color: #5c4033;
+}
+
+.media-aspect-ratio {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-top: 1rem;
+}
+
+.media-aspect-ratio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.page-btn {
+    padding: 8px 16px;
+    background-color: #5c4033;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.page-btn:hover {
+    background-color: #3e2a21;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #5c4033;
+    color: #fff;
+    margin-top: 3rem;
+}
 
 </body>
 </html>
